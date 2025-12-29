@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://printmasters.in/sitemap.xml
+Sitemap: https://printmasters.co.in/sitemap.xml
 
 User-agent: Googlebot
 Allow: /
