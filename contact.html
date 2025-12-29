@@ -28,7 +28,23 @@
   }
   </script>
 
-  <header class="site-header"><!-- Same header --></header>
+  <header class="site-header">
+   <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">PM</span>
+        <span class="logo-text">Print Masters</span>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#services" class="nav-link">Solutions</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>  
+  </header>
 
   <main>
     <section class="page-hero">
@@ -95,6 +111,43 @@
   </main>
 
   <!-- Same footer -->
+   <!-- ORIGINAL CTA (UNCHANGED) -->
+  <section class="section section-cta">
+    <div class="container cta-inner">
+      <div>
+        <h2>Discuss your next blister or alu‑alu job</h2>
+        <p>Share your foil specs, print shades, and line details for a tailored quotation and lead‑time plan.</p>
+      </div>
+      <a href="contact.html" class="btn btn-light">Contact Print Masters</a>
+    </div>
+  </section>
+
+  <!-- ORIGINAL FOOTER + NAP (SEO Enhanced) -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">PM</span>
+        <span class="logo-text">Print Masters</span>
+        <p>Pharma printing solutions for blister foil, alu‑alu foil, and pharma‑grade PVC.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📍 Plot No 6A, Phase-3, Industrial Area, Sansarpur Terrace, Himachal Pradesh, India</p>
+        <p>📞 +91-90-4150-4150</p>
+        <p>✉️ printmasters.spt@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Print Masters. All rights reserved. | <a href="sitemap.xml">Sitemap</a> Proudly Designed by <a href="https://ridh.im">Ridh.im</a></p>
+    </div>
+  </footer>
+  
   <script src="assets/js/main.js"></script>
 </body>
 </html>
