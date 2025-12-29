@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Sitemap: https://printmasters.in/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
