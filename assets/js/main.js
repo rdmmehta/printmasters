@@ -1,25 +1,56 @@
-// Mobile nav toggle
-const navToggle = document.getElementById("navToggle");
-const mainNav = document.getElementById("mainNav");
+// Mobile Navigation Toggle - FIXED
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+
+function toggleMobileMenu() {
+  mainNav.classList.toggle('open');
+  navToggle.classList.toggle('open');
+}
+
 if (navToggle && mainNav) {
-  navToggle.addEventListener("click", () => {
-    mainNav.classList.toggle("open");
+  // Toggle on hamburger click
+  navToggle.addEventListener('click', toggleMobileMenu);
+  
+  // Close menu when clicking any nav link (MOBILE ONLY)
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        mainNav.classList.remove('open');
+        navToggle.classList.remove('open');
+      }
+    });
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!mainNav.contains(e.target) && !navToggle.contains(e.target)) {
+      mainNav.classList.remove('open');
+      navToggle.classList.remove('open');
+    }
   });
 }
 
-// Dynamic year
-document.getElementById("year")?.textContent = new Date().getFullYear();
+// Dynamic year in footer
+const yearSpan = document.getElementById('year');
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
 
-// Enhanced contact form with local storage
-const contactForm = document.getElementById("contactForm");
-if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
+// Contact form handler
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+
+if (contactForm && formStatus) {
+  contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    // Simulate form submission
+    formStatus.textContent = 'Submitting...';
+    
+    // Simulate API call
     setTimeout(() => {
-      alert("Thank you! Quote request sent to Print Masters Sansarpur Terrace team.");
+      formStatus.textContent = 'Thank you! Your enquiry has been sent. We will contact you within 24 hours.';
+      formStatus.style.color = '#10b981';
       contactForm.reset();
-    }, 500);
+    }, 1500);
   });
 }
 
@@ -27,8 +58,20 @@ if (contactForm) {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   });
+});
+
+// Close mobile menu on window resize (desktop)
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    mainNav.classList.remove('open');
+    navToggle.classList.remove('open');
+  }
 });
