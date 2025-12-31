@@ -1,3 +1,22 @@
+/* CACHE CONTROL - 1 YEAR IMAGE CACHE */
+* {
+  /* Existing styles */
+}
+
+/* Force browser caching for images */
+img, [style*="background-image"] {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Preload critical hero images */
+.hero-image-1,
+.hero-image-2 {
+  background-image: linear-gradient(...),
+    url("../img/hero-blister-foil.jpg");
+  /* Preload hint */
+  contain: layout style paint;
+}
+
 :root {
   --color-bg: #ffffff;
   --color-bg-muted: #f4f6fb;
