@@ -281,22 +281,22 @@ body {
 /* Use licensed, high-quality stock images for actual deployment */
 .hero-image-1 {
   min-height: 220px;
-  background-image: linear-gradient(
-      135deg,
-      rgba(15, 23, 42, 0.3),
-      rgba(37, 99, 235, 0.35)
-    ),
-    url("../img/blister-foil-placeholder.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.3), rgba(37, 99, 235, 0.35)),
+    url("../img/hero-blister-foil.jpg");
 }
 
 .hero-image-2 {
   min-height: 180px;
-  background-image: linear-gradient(
-      135deg,
-      rgba(15, 23, 42, 0.2),
-      rgba(56, 189, 248, 0.35)
-    ),
-    url("../img/alualu-foil-placeholder.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.2), rgba(56, 189, 248, 0.35)),
+    url("../img/hero-alualu-foil.jpg");
 }
 
 /* Highlights */
@@ -350,15 +350,24 @@ body {
 
 /* Replace placeholders with licensed images, keeping pharma-style visuals */
 .service-image-blister {
-  background-image: url("../img/service-blister-placeholder.jpg");
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/service-blister.jpg");
 }
 
 .service-image-alualu {
-  background-image: url("../img/service-alualu-placeholder.jpg");
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/service-alualu.jpg");
 }
 
 .service-image-pvc {
-  background-image: url("../img/service-pvc-placeholder.jpg");
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/service-pvc.jpg");
 }
 
 .service-body {
