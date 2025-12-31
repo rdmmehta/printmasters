@@ -1,0 +1,10 @@
+# Cache images for 1 year
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|ico)$">
+  Header set Cache-Control "max-age=31536000, public, immutable"
+  Header set Expires "Thu, 31 Dec 2026 23:59:59 GMT"
+</FilesMatch>
+
+# Cache CSS/JS for 1 month
+<FilesMatch "\.(css|js)$">
+  Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
